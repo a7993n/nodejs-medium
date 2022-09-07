@@ -58,15 +58,16 @@ class Employes {
     //Employees check-out with their id and current date and time and a comment
     static async checkOut(req, res) {
         const employeI = await Employe.findByPk(req.params.id);
-        //calculate the difference checkIn  checkOut in hours 
-        const checkIn = new Date(employeI.checkIn);
-        const checkOut =new Date(employeI.checkOut);
-        let total = Math.abs(checkOut.getTime() - checkIn.getTime());
-        let diff = Math.floor(total / 1000 / 60 / 60);       
+        //difference between checkIn and checkOut
+        const diff = (new Date() - employeI.checkIn) / 1000;
+        const diffHours = Math.floor(diff / 3600) % 24;
+        const diffMinutes = Math.floor(diff / 60) % 60;
+        const diffSeconds = diff % 60;
+
         // convert diff milleseconds to hours
         const employe = await Employe.update({
             //get current date and time, 
-           workingHours: diff,
+           workingHours: diffHours+ "h" + diffMinutes + "m" + diffSeconds + "s",
             checkOut: new Date(),
             comment: req.params.comment,
         }, {where: {id: req.params.id}});
