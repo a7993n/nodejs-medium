@@ -10,7 +10,7 @@ router.delete('/employes/:id', controller.deleteEmploye);
 
 router.get('/employes/date/:date', controller.getEmployesByDate);
 
-router.patch('/employes/checkin/:id&:comment', controller.checkIn);
-router.patch('/employes/checkout/:id&:comment', controller.checkOut);
+router.put('/employes/checkin/:id&:comment', controller.checkIn);
+router.put('/employes/checkout/:id&:comment', controller.checkOut);
 
 module.exports = router;

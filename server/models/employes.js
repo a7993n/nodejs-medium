@@ -14,7 +14,8 @@ const Employes = sequelize.define("employes", {
     department: DataTypes.STRING,
     checkIn: DataTypes.DATE,
     checkOut: DataTypes.DATE,
-    comment: DataTypes.STRING
+    comment: DataTypes.STRING,
+    workingHours: DataTypes.INTEGER
 }, {timestamps: false});
 
 

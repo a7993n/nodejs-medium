@@ -49,7 +49,7 @@ class Employes {
         const employe = await Employe.update({
             //get current date and time, 
             checkIn: new Date(),
-            comment: req.query.comment
+            comment: req.params.comment,
         }, {where: {id: req.params.id}});
         res.status(204).json({
             message: "Employe check-in!"
@@ -57,19 +57,26 @@ class Employes {
     }
     //Employees check-out with their id and current date and time and a comment
     static async checkOut(req, res) {
+        const employeI = await Employe.findByPk(req.params.id);
+        //calculate the difference checkIn  checkOut in hours 
+        const checkIn = new Date(employeI.checkIn);
+        const checkOut =new Date(employeI.checkOut);
+        let total = Math.abs(checkOut.getTime() - checkIn.getTime());
+        let diff = Math.floor(total / 1000 / 60 / 60);       
+        
+        // convert diff milleseconds to hours
         const employe = await Employe.update({
             //get current date and time, 
+           workingHours: diff,
             checkOut: new Date(),
-            comment: req.query.comment
+            comment: req.params.comment,
         }, {where: {id: req.params.id}});
-        let timeWorked = employe.checkOut - employe.checkIn;
-
         res.status(204).json({
-            message: `ID:${req.params.id}\n Employe check-out!\n WorkingHours:${timeWorked}`,
+            message: `ID:${req.params.id}\n Employe check-out!\n WorkingHours:${diff}`,
         })
     }
 
-    
+   
 
 }
 

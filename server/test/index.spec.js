@@ -33,7 +33,7 @@ beforeEach(async () => {
 })
 
 afterEach(async () => {
-    await Employes.drop();
+     await Employes.drop();
 })
 
 
@@ -105,7 +105,7 @@ describe('GET /employes/date/:date', () => {
 })
 
 //CHECK IN EMPLOYE
-describe('PATCH /employes/checkin/:id&:comment', () => {
+describe('PUT /employes/checkin/:id&:comment', () => {
     it('should check in employe', async () => {
         const employes = await setup(employe_1);
         const response = await chai.request(server).patch('/employes/checkin/' + employes[0].id + "&" + "test");
@@ -115,7 +115,7 @@ describe('PATCH /employes/checkin/:id&:comment', () => {
 })
 
 //CHECK OUT EMPLOYE
-describe('PATCH /employes/checkout/:id&:comment', () => {
+describe('PUT /employes/checkout/:id&:comment', () => {
     it('should check out employe', async () => {
         const employes = await setup(employe_1);
         const response = await chai.request(server).patch('/employes/checkout/' + employes[0].id + "&" + "test");
