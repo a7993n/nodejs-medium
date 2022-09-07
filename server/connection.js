@@ -1,11 +1,11 @@
 const {Sequelize} = require("sequelize");
 const sequelize = new Sequelize("sqlite::memory:");
-const Products = require('./models/employes');
+const Employes = require('./models/employes');
 
 return sequelize.authenticate()
     .then(result => {
         console.log(`SQLite successfully connected!`);
-        return Products.sync();
+        return Employes.sync();
     })
     .then(result => {
         console.log(`Employees table created`);

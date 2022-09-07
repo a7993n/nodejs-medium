@@ -8,7 +8,7 @@ services:
     - ./server:/server
     command: npm install && npm run dev
     ports:
-    - "8080:80"
+    - "4000:4000"
     networks:
     - aymen
       
