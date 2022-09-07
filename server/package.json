@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "nodemon app",
+    "dev": "npm install && nodemon app",
     "start": "node bin/www",
     "prestart": "npm install",
     "pretest": "npm install",
@@ -20,12 +20,12 @@
     "mocha-junit-reporter": "^1.23.3",
     "mocha-multi-reporters": "^1.1.7",
     "morgan": "~1.9.1",
-    "sequelize": "^6.3.3",
-    "sqlite3": "^5.0.11"
+    "sequelize": "^6.3.3"
   },
   "devDependencies": {
     "bluebird": "^3.7.2",
     "cross-env": "^7.0.2",
-    "nodemon": "^2.0.19"
+    "nodemon": "^2.0.19",
+    "sqlite3": "^5.0.11"
   }
 }
