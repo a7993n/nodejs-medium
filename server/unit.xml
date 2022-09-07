@@ -1,45 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="Mocha Tests" time="0.1090" tests="8" failures="2">
-  <testsuite name="Root Suite" timestamp="2022-09-07T13:56:00" tests="0" time="0.0000" failures="0">
+<testsuites name="Mocha Tests" time="0.1130" tests="8" failures="0">
+  <testsuite name="Root Suite" timestamp="2022-09-07T14:44:00" tests="0" time="0.0000" failures="0">
   </testsuite>
-  <testsuite name="employes_api" timestamp="2022-09-07T13:56:00" tests="0" file="/Users/ajarouih/Desktop/codes/pointage/server/test/index.spec.js" time="0.0000" failures="0">
+  <testsuite name="employes_api" timestamp="2022-09-07T14:44:00" tests="0" file="/Users/ajarouih/Desktop/codes/pointage/server/test/index.spec.js" time="0.0000" failures="0">
   </testsuite>
-  <testsuite name="POST /employes" timestamp="2022-09-07T13:56:00" tests="1" file="/Users/ajarouih/Desktop/codes/pointage/server/test/index.spec.js" time="0.0390" failures="0">
-    <testcase name="employes_api POST /employes should create a new employe" time="0.0390" classname="should create a new employe">
+  <testsuite name="POST /employes" timestamp="2022-09-07T14:44:00" tests="1" file="/Users/ajarouih/Desktop/codes/pointage/server/test/index.spec.js" time="0.0400" failures="0">
+    <testcase name="employes_api POST /employes should create a new employe" time="0.0400" classname="should create a new employe">
     </testcase>
   </testsuite>
-  <testsuite name="GET /employes" timestamp="2022-09-07T13:56:00" tests="1" file="/Users/ajarouih/Desktop/codes/pointage/server/test/index.spec.js" time="0.0170" failures="0">
-    <testcase name="employes_api GET /employes should get all employes" time="0.0170" classname="should get all employes">
+  <testsuite name="GET /employes" timestamp="2022-09-07T14:44:00" tests="1" file="/Users/ajarouih/Desktop/codes/pointage/server/test/index.spec.js" time="0.0150" failures="0">
+    <testcase name="employes_api GET /employes should get all employes" time="0.0150" classname="should get all employes">
     </testcase>
   </testsuite>
-  <testsuite name="DELETE /employes/:id" timestamp="2022-09-07T13:56:00" tests="1" file="/Users/ajarouih/Desktop/codes/pointage/server/test/index.spec.js" time="0.0090" failures="0">
-    <testcase name="employes_api DELETE /employes/:id should delete employe" time="0.0090" classname="should delete employe">
+  <testsuite name="PUT /employes/:id" timestamp="2022-09-07T14:44:00" tests="1" file="/Users/ajarouih/Desktop/codes/pointage/server/test/index.spec.js" time="0.0080" failures="0">
+    <testcase name="employes_api PUT /employes/:id should update employe" time="0.0080" classname="should update employe">
     </testcase>
   </testsuite>
-  <testsuite name="PUT /employes/:id" timestamp="2022-09-07T13:56:00" tests="1" file="/Users/ajarouih/Desktop/codes/pointage/server/test/index.spec.js" time="0.0070" failures="0">
-    <testcase name="employes_api PUT /employes/:id should update employe" time="0.0070" classname="should update employe">
-    </testcase>
-  </testsuite>
-  <testsuite name="GET /employes/:id" timestamp="2022-09-07T13:56:00" tests="1" file="/Users/ajarouih/Desktop/codes/pointage/server/test/index.spec.js" time="0.0120" failures="0">
+  <testsuite name="GET /employes/:id" timestamp="2022-09-07T14:44:00" tests="1" file="/Users/ajarouih/Desktop/codes/pointage/server/test/index.spec.js" time="0.0120" failures="0">
     <testcase name="employes_api GET /employes/:id should get one employe" time="0.0120" classname="should get one employe">
     </testcase>
   </testsuite>
-  <testsuite name="GET /employes/date/:date" timestamp="2022-09-07T13:56:00" tests="1" file="/Users/ajarouih/Desktop/codes/pointage/server/test/index.spec.js" time="0.0070" failures="0">
-    <testcase name="employes_api GET /employes/date/:date should get employes by date" time="0.0070" classname="should get employes by date">
+  <testsuite name="GET /employes/date/:date" timestamp="2022-09-07T14:44:00" tests="1" file="/Users/ajarouih/Desktop/codes/pointage/server/test/index.spec.js" time="0.0090" failures="0">
+    <testcase name="employes_api GET /employes/date/:date should get employes by date" time="0.0090" classname="should get employes by date">
     </testcase>
   </testsuite>
-  <testsuite name="PATCH /employes/checkin/:id&amp;:comment" timestamp="2022-09-07T13:56:00" tests="1" file="/Users/ajarouih/Desktop/codes/pointage/server/test/index.spec.js" time="0.0100" failures="1">
-    <testcase name="employes_api PATCH /employes/checkin/:id&amp;:comment should check in employe" time="0.0100" classname="should check in employe">
-      <failure message="expected { Object (_events, _eventsCount, ...) } to have status code 204 but got 404" type="AssertionError"><![CDATA[AssertionError: expected { Object (_events, _eventsCount, ...) } to have status code 204 but got 404
-    at Context.<anonymous> (test/index.spec.js:112:30)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)]]></failure>
+  <testsuite name="PUT /employes/checkin/:id&amp;:comment" timestamp="2022-09-07T14:44:00" tests="1" file="/Users/ajarouih/Desktop/codes/pointage/server/test/index.spec.js" time="0.0100" failures="0">
+    <testcase name="employes_api PUT /employes/checkin/:id&amp;:comment should check in employe" time="0.0100" classname="should check in employe">
     </testcase>
   </testsuite>
-  <testsuite name="PATCH /employes/checkout/:id&amp;:comment" timestamp="2022-09-07T13:56:00" tests="1" file="/Users/ajarouih/Desktop/codes/pointage/server/test/index.spec.js" time="0.0080" failures="1">
-    <testcase name="employes_api PATCH /employes/checkout/:id&amp;:comment should check out employe" time="0.0080" classname="should check out employe">
-      <failure message="expected { Object (_events, _eventsCount, ...) } to have status code 204 but got 404" type="AssertionError"><![CDATA[AssertionError: expected { Object (_events, _eventsCount, ...) } to have status code 204 but got 404
-    at Context.<anonymous> (test/index.spec.js:122:30)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)]]></failure>
+  <testsuite name="PUT /employes/checkout/:id&amp;:comment" timestamp="2022-09-07T14:44:00" tests="1" file="/Users/ajarouih/Desktop/codes/pointage/server/test/index.spec.js" time="0.0080" failures="0">
+    <testcase name="employes_api PUT /employes/checkout/:id&amp;:comment should check out employe" time="0.0080" classname="should check out employe">
+    </testcase>
+  </testsuite>
+  <testsuite name="DELETE /employes/:id" timestamp="2022-09-07T14:44:00" tests="1" file="/Users/ajarouih/Desktop/codes/pointage/server/test/index.spec.js" time="0.0110" failures="0">
+    <testcase name="employes_api DELETE /employes/:id should delete employe" time="0.0110" classname="should delete employe">
     </testcase>
   </testsuite>
 </testsuites>

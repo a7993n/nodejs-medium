@@ -61,16 +61,7 @@ describe('GET /employes', () => {
     })
 })
 
-//DELETE EMPLOYE FROM DATABASE
-describe('DELETE /employes/:id', () => {
-    it('should delete employe', async () => {
-        const employes = await setup(employe_1);
-        const response = await chai.request(server).delete('/employes/' + employes[0].id);
-        response.should.have.status(200);
-        response.body.should.be.a('number');
-    })
 
-})
 
 // Update employe
 describe('PUT /employes/:id', () => {
@@ -108,9 +99,10 @@ describe('GET /employes/date/:date', () => {
 describe('PUT /employes/checkin/:id&:comment', () => {
     it('should check in employe', async () => {
         const employes = await setup(employe_1);
-        const response = await chai.request(server).patch('/employes/checkin/' + employes[0].id + "&" + "test");
+        const response = await chai.request(server).put('/employes/checkin/' + employes[0].id + "&test");
         response.should.have.status(204);
     })
+
 
 })
 
@@ -118,12 +110,22 @@ describe('PUT /employes/checkin/:id&:comment', () => {
 describe('PUT /employes/checkout/:id&:comment', () => {
     it('should check out employe', async () => {
         const employes = await setup(employe_1);
-        const response = await chai.request(server).patch('/employes/checkout/' + employes[0].id + "&" + "test");
+        const response = await chai.request(server).put('/employes/checkout/' + employes[0].id + "&test");
         response.should.have.status(204);
     })
 
 
 })
 
+//DELETE EMPLOYE FROM DATABASE
+describe('DELETE /employes/:id', () => {
+    it('should delete employe', async () => {
+        const employes = await setup(employe_1);
+        const response = await chai.request(server).delete('/employes/' + employes[0].id);
+        response.should.have.status(200);
+        response.body.should.be.a('number');
+    })
+
+})
 
 });

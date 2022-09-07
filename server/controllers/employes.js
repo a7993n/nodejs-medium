@@ -63,7 +63,6 @@ class Employes {
         const checkOut =new Date(employeI.checkOut);
         let total = Math.abs(checkOut.getTime() - checkIn.getTime());
         let diff = Math.floor(total / 1000 / 60 / 60);       
-        
         // convert diff milleseconds to hours
         const employe = await Employe.update({
             //get current date and time, 
@@ -72,7 +71,7 @@ class Employes {
             comment: req.params.comment,
         }, {where: {id: req.params.id}});
         res.status(204).json({
-            message: `ID:${req.params.id}\n Employe check-out!\n WorkingHours:${diff}`,
+            message: "Employe check-out!",
         })
     }
 
