@@ -8,7 +8,7 @@ return sequelize.authenticate()
         return Products.sync();
     })
     .then(result => {
-        console.log(`Products table created`);
+        console.log(`Employees table created`);
         return result;
     })
     .catch(error => {
